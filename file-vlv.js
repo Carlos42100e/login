@@ -5,9 +5,9 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
 
     const validUsers = [
-        {username: 'usuario1', password: '5623'},
-        {username: 'joseph', password: '5623'},
-        {username: 'carlos', password: '5623'}
+        {username: 'usuario1', password: '4321'},
+        {username: 'Joseph', password: '6969'},
+        {username: 'Carlos', password: '5623'}
     ];
 
     let userIsValid = false;
