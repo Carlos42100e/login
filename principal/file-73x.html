@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir y Visualizar Imágenes</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, gray, lightblue);
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="" method="post" enctype="multipart/form-data">
+        <input type="file" id="file" name="file" accept="image/*" required />
+        <input type="submit" value="Subir Imagen" name="submit">
+    </form>
+
+    <div id="images"></div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var file = document.getElementById('file').files[0];
+            var formData = new FormData();
+            formData.append('file', file);
+            fetch('file-eqw.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    var img = document.createElement('img');
+                    img.src = data.path;
+                    document.getElementById('images').appendChild(img);
+                } else {
+                    alert('Error al subir la imagen.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    background-color: #001a33; /* color celeste neón */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #00ffff; /* color celeste neón */
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #444;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    color: #00ffff; /* color celeste neón */
+    background-color: #111;
+    cursor: pointer;
+    transition: background-color 0.3s; /* animación de cambio de color */
+}
+
+button:hover {
+    background-color: #333;
+}
